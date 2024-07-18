@@ -1,0 +1,95 @@
+
+#texto{
+    font-weight: 300 bold;
+    
+   }
+   
+   #texto span{
+     position: relative;
+   }
+   
+   #texto span::before{
+     content: "";
+     animation: texto 20s infinite;
+    }
+   #texto span::after{
+     content: "";
+     position: absolute;
+     height: 80%;
+     border-left: 2px solid #01022e;
+     right: -5px;
+     animation: cursor .8s infinite, escreverTexto 20s steps(25) infinite;
+     width: calc(100% + 15px);
+     background-color: #fff;
+    
+   }
+   
+   @keyframes cursor {
+     0%{
+       border-left: 2px solid #f8f8fc;
+     }
+     
+   }
+   
+   
+    @keyframes texto{
+     0%, 20%{
+       content: "Olá,";
+     }
+     21%, 40%{
+       content: " eu sou";
+     }
+     41%, 60%{
+       content: "Alves Hatewa";
+     }
+     61%, 80%{
+       content: "Desenvolvedor";
+     }
+     81%, 100%{
+       content: " Fullstack";
+     }
+   
+    }
+   
+    @keyframes escreverTexto {
+   
+     10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+       width: 0;
+     }
+     5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+       width: calc(100% + 15px);
+     }
+     
+   }
+
+   label{
+    font-size: 14px;
+    font-weight: bold;
+    color: #01022e;
+  }
+
+  span{
+    padding-right: 25px;
+    align-items: center;
+    text-align: center;
+    color: aqua;
+  }
+
+  .paragrafo{
+    text-align: justify;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .titulo{
+    font-size: 18px;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    color:#01022e;
+    text-decoration-line: none;
+    padding-top: 15px;
+  }
+
+  .servicos{
+    justify-content: flex-end;
+  }
